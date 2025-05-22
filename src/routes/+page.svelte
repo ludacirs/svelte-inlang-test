@@ -7,6 +7,7 @@
 </script>
 
 {m.example_message({ username: "John" })}
+{m.test_message()}
 
 <p>Count: {double}</p>
 
