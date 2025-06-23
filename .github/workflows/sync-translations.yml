@@ -49,3 +49,13 @@ jobs:
           base: master
           title: 'Import Excel to JSON'
           body: '엑셀 파일을 JSON으로 변환하여 추가합니다. (extract-xlsx 사용)'
+
+      - name: Show git status and log
+        run: |
+          git status
+          git log --oneline --graph --decorate --all
+
+      - name: Check Remote
+        run: |
+          git remote -v
+          git branch -a
