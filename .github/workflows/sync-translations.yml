@@ -1,0 +1,53 @@
+name: Import Excel and Create PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_url:
+        description: '엑셀 파일의 다운로드 URL'
+        required: true
+
+jobs:
+  import-and-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Download Excel file
+        run: |
+          curl -L "${{ github.event.inputs.file_url }}" -o input.xlsx
+
+      - name: Convert Excel to JSON
+        run: |
+          npm install -g xlsx
+          node <<'EOF'
+          const XLSX = require('xlsx');
+          const fs = require('fs');
+          const workbook = XLSX.readFile('input.xlsx');
+          const sheetName = workbook.SheetNames[0];
+          const json = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
+          fs.writeFileSync('imported.json', JSON.stringify(json, null, 2));
+          EOF
+
+      - name: Create new branch
+        run: |
+          BRANCH="import-excel-$(date +%s)"
+          git checkout -b $BRANCH
+          git add imported.json
+          git commit -m "feat: import excel to json"
+          git push origin $BRANCH
+          echo "branch_name=$BRANCH" >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.branch_name }}
+          title: "Import Excel to JSON"
+          body: "엑셀 파일을 JSON으로 변환하여 추가합니다." 
