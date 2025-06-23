@@ -29,26 +29,15 @@ jobs:
       - name: Convert Excel to JSON using extract-xlsx
         run: node script/extract-xlsx.cjs import https://docs.google.com/spreadsheets/d/${{ github.event.inputs.spreadsheetId }}/export?format=xlsx
 
-      - name: Create new branch and commit
-        run: |
-          BRANCH="import-excel-$(date +%s)"
-          git checkout -b $BRANCH
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "feat: import excel to json via extract-xlsx" || echo "No changes to commit"
-          git push origin $BRANCH
-          echo "branch_name=$BRANCH" >> $GITHUB_ENV
-          git checkout master
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.branch_name }}
-          base: master
+          commit-message: 'feat: import excel to json via extract-xlsx'
           title: 'Import Excel to JSON'
           body: '엑셀 파일을 JSON으로 변환하여 추가합니다. (extract-xlsx 사용)'
+          branch: import-excel-${{ github.run_id }}
+          base: master
 
       - name: Show git status and log
         run: |
