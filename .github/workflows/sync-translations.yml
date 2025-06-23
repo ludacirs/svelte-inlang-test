@@ -1,5 +1,9 @@
 name: Import Excel and Create PR
 
+permissions:
+  contents: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
     inputs:
@@ -25,13 +29,14 @@ jobs:
       - name: Convert Excel to JSON using extract-xlsx
         run: node script/extract-xlsx.cjs import https://docs.google.com/spreadsheets/d/${{ github.event.inputs.spreadsheetId }}/export?format=xlsx
 
-      - name: Create new branch
+      - name: Create new branch and commit
         run: |
           BRANCH="import-excel-$(date +%s)"
           git checkout -b $BRANCH
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/lib/i18n/locales/*.json
           git commit -m "feat: import excel to json via extract-xlsx" || echo "No changes to commit"
-          git push origin $BRANCH
           echo "branch_name=$BRANCH" >> $GITHUB_ENV
 
       - name: Create Pull Request
