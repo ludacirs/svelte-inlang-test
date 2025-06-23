@@ -3,8 +3,8 @@ name: Import Excel and Create PR
 on:
   workflow_dispatch:
     inputs:
-      file_url:
-        description: '엑셀 파일의 다운로드 URL'
+      spreadsheetId:
+        description: '엑셀 파일의 스프레드시트 ID'
         required: true
 
 jobs:
