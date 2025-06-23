@@ -19,28 +19,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Download Excel file
-        run: |
-          curl -L "${{ github.event.inputs.spreadsheetId }}" -o input.xlsx
+      - name: Install exceljs only
+        run: npm install exceljs
 
-      - name: Convert Excel to JSON
-        run: |
-          npm install -g xlsx
-          node <<'EOF'
-          const XLSX = require('xlsx');
-          const fs = require('fs');
-          const workbook = XLSX.readFile('input.xlsx');
-          const sheetName = workbook.SheetNames[0];
-          const json = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
-          fs.writeFileSync('imported.json', JSON.stringify(json, null, 2));
-          EOF
+      - name: Convert Excel to JSON using extract-xlsx
+        run: node script/extract-xlsx.cjs import https://docs.google.com/spreadsheets/d/${{ github.event.inputs.spreadsheetId }}/export?format=xlsx
 
       - name: Create new branch
         run: |
           BRANCH="import-excel-$(date +%s)"
           git checkout -b $BRANCH
-          git add imported.json
-          git commit -m "feat: import excel to json"
+          git add src/lib/i18n/locales/*.json
+          git commit -m "feat: import excel to json via extract-xlsx" || echo "No changes to commit"
           git push origin $BRANCH
           echo "branch_name=$BRANCH" >> $GITHUB_ENV
 
@@ -49,5 +39,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.branch_name }}
-          title: "Import Excel to JSON"
-          body: "엑셀 파일을 JSON으로 변환하여 추가합니다." 
+          title: 'Import Excel to JSON'
+          body: '엑셀 파일을 JSON으로 변환하여 추가합니다. (extract-xlsx 사용)'
