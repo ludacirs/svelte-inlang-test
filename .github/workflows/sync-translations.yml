@@ -21,7 +21,7 @@ jobs:
 
       - name: Download Excel file
         run: |
-          curl -L "${{ github.event.inputs.file_url }}" -o input.xlsx
+          curl -L "${{ github.event.inputs.spreadsheetId }}" -o input.xlsx
 
       - name: Convert Excel to JSON
         run: |
