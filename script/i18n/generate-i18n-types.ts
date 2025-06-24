@@ -81,6 +81,31 @@ export function getParamTypesFromObject(obj: TranslationObject): Record<string, 
   return paramTypes;
 }
 
+export function getParamTypesFromAllLanguages(translations: { [key: string]: TranslationObject }): Record<string, string[]> {
+  const allParamTypes: { [key: string]: string[] } = {};
+  
+  Object.values(translations).forEach(langData => {
+    const keysWithValues = getAllKeysWithValues(langData);
+    
+    keysWithValues.forEach(({ key, value }) => {
+      const params = extractParams(value);
+      if (params.length > 0) {
+        if (!allParamTypes[key]) {
+          allParamTypes[key] = [];
+        }
+        // 중복 제거하면서 모든 파라미터 추가
+        params.forEach(param => {
+          if (!allParamTypes[key].includes(param)) {
+            allParamTypes[key].push(param);
+          }
+        });
+      }
+    });
+  });
+  
+  return allParamTypes;
+}
+
 export function generateTypeDefinition(
   translationKeys: string[],
   paramTypes: Record<string, string[]>,
@@ -167,7 +192,7 @@ export function generateI18nTypes(i18nDirPath: string, outputDirPath: string): v
   const firstLang = Object.keys(translations)[0];
   const firstLangData = translations[firstLang];
 
-  const paramTypes = getParamTypesFromObject(firstLangData);
+  const paramTypes = getParamTypesFromAllLanguages(translations);
 
   const translationKeys = getAllKeys(firstLangData);
 
