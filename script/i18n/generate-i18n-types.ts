@@ -6,7 +6,7 @@ import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const i18nDir = path.resolve(__dirname, '../../src/lib/shared/config/i18n');
+const i18nDir = path.resolve(__dirname, '../../src/lib/i18n/locales');
 const outputDir = path.resolve(__dirname, '../../src/lib/shared/model/types/');
 
 if (!fs.existsSync(outputDir)) {
