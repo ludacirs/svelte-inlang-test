@@ -35,6 +35,24 @@ jobs:
       - name: Run TypeScript script
         run: tsx script/i18n/generate-i18n-types.ts
 
+      - name: Set branch name with timestamp
+        run: echo "BRANCH_NAME=auto/i18n-update-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+
+      - name: Create a new branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b $BRANCH_NAME
+
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "자동 번역 동기화"
+
+      - name: Push changes
+        run: |
+          git push origin $BRANCH_NAME
+
       - name: Create Pull Request
         uses: actions/github-script@v6
         with:
@@ -44,6 +62,6 @@ jobs:
               repo: context.repo.repo,
               title: 'PR 제목',
               body: 'PR 설명',
-              head: 'feature-branch',  // PR을 생성할 브랜치
-              base: 'main'  // 타겟 브랜치
+              head: process.env.BRANCH_NAME,  // PR을 생성할 브랜치
+              base: 'master'  // 타겟 브랜치
             });
