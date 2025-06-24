@@ -36,11 +36,14 @@ jobs:
         run: tsx script/i18n/generate-i18n-types.ts
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: actions/github-script@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'feat: import excel to json via extract-xlsx'
-          title: 'Import Excel to JSON'
-          body: '엑셀 파일을 JSON으로 변환하여 추가합니다. (extract-xlsx 사용)'
-          branch: import-excel-${{ github.run_id }}
-          base: master
+          script: |
+            await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'PR 제목',
+              body: 'PR 설명',
+              head: 'feature-branch',  // PR을 생성할 브랜치
+              base: 'main'  // 타겟 브랜치
+            });
