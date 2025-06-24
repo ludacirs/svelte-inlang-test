@@ -1,0 +1,839 @@
+{
+  "eventConnected": {
+    "batchSelection": "번역테스트를위한 텍스트",
+    "cameraAssign": "",
+    "cameraInput": {
+      "placeholder": ""
+    },
+    "connectClear": "ㅁㄴㅇㄹㅁㄴㄹㅇ",
+    "connectEvent": "",
+    "connectedCameraCount": "",
+    "date": "",
+    "detectionNo": "ㅁㄴㅇㄹㅁ",
+    "detectionZoneYes": "",
+    "dropDown": {
+      "detectionZoneSetting": "ㅁㄴㅇㄹ",
+      "disconnect": ""
+    },
+    "event": "ㅁㄴㅇㄹㅁㄴㅇㄹ",
+    "eventRequiresDetectionZone": "",
+    "noConnectableCamera": "",
+    "noConnectableEvents": "",
+    "selectedCameraCount": "",
+    "setting": "",
+    "startTime": "ㅁㄴㅇㄹ",
+    "table": {
+      "description": "",
+      "detectionZone": "",
+      "name": "",
+      "registrationDate": "",
+      "setting": ""
+    },
+    "thumbnail": ""
+  },
+  "eventLog": {
+    "cameraName": "",
+    "date": "",
+    "description": "",
+    "detectedEvent": "",
+    "endTime": "",
+    "event": "",
+    "eventInput": {
+      "placeholder": ""
+    },
+    "noEventFound": "",
+    "playVideo": "",
+    "startTime": "",
+    "thumbnail": "",
+    "toolTip": {
+      "search": ""
+    },
+    "videoCheck": ""
+  },
+  "forbidden": {
+    "apologyMessage": "",
+    "backToMain": "",
+    "reasonMessage": "",
+    "title": ""
+  },
+  "home": {
+    "camera": "",
+    "cameraInput": {
+      "placeholder": ""
+    },
+    "cameraList": "",
+    "cameraStatus": "",
+    "error": "",
+    "eventNotification": "",
+    "eventType": "",
+    "eventView": "",
+    "noConnectedCamera": "",
+    "noEventsDetected": "",
+    "noNotifications": "",
+    "right": "",
+    "toolTip": {
+      "eventList": "",
+      "moveVideoPage": "",
+      "search": "",
+      "viewPanelClose": "",
+      "viewPanelOpen": ""
+    }
+  },
+  "liveMonitoring": {
+    "cctvList": "",
+    "confirm": "",
+    "emptyGridMessage": "",
+    "emptyPanel": "",
+    "gridSizeFive": "",
+    "gridSizeFour": "",
+    "gridSizeLeft": "",
+    "gridSizeOne": "",
+    "gridSizeRight": "",
+    "gridSizeSix": "",
+    "gridSizeThree": "",
+    "gridSizeTwo": "",
+    "insufficientSpace": "",
+    "insufficientSpaceMessage": "",
+    "layout": "",
+    "liveMonitoring": "",
+    "modal": {
+      "setDelay": {
+        "delay": "",
+        "description": "",
+        "display": "",
+        "name": "",
+        "noConnectedCctv": "",
+        "title": ""
+      }
+    },
+    "resetPanel": "",
+    "selectCamera": "",
+    "setDelay": "",
+    "system": "",
+    "toolTip": {
+      "eventList": "",
+      "moveVideoPage": "",
+      "search": "",
+      "viewPanelClose": "",
+      "viewPanelOpen": ""
+    },
+    "videoPlay": ""
+  },
+  "manageConnect": {
+    "addCamera": "",
+    "batchSelection": "",
+    "cameraInput": {
+      "placeholder": ""
+    },
+    "connecting": "",
+    "delete": "",
+    "description": "",
+    "dropDown": {
+      "delete": "",
+      "detectionZoneSetting": "",
+      "editDetails": "",
+      "editFolderName": "",
+      "eventModify": "",
+      "locationMove": "",
+      "userDesignation": ""
+    },
+    "error": "",
+    "event": "",
+    "locationMove": "",
+    "manageConnection": "",
+    "name": "",
+    "newFolder": "",
+    "noConnectableCamera": "",
+    "requiredSetting": "",
+    "right": "",
+    "selectedCount": "",
+    "setting": "",
+    "status": "",
+    "toolTip": {
+      "Camera": "",
+      "connected": "",
+      "detectionZone": "",
+      "error": "",
+      "event": "",
+      "hardware": "",
+      "requiredDetectionArea": "",
+      "requiredEvent": "",
+      "requiredSetting": "",
+      "right": "",
+      "rtspConnected": "",
+      "rtspDisconnected": "",
+      "satisfyCondition": "",
+      "search": "",
+      "serverError": "",
+      "status": "",
+      "statusDescription": "",
+      "workingProperly": ""
+    },
+    "user": "",
+    "userDesignation": ""
+  },
+  "modal": {
+    "accountModify": {
+      "button": {
+        "cancel": "",
+        "modify": ""
+      },
+      "email": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "name": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "areaDivision": {
+      "button": {
+        "cancel": "",
+        "divide": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "areaSaved": {
+      "button": {
+        "confirm": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "assignEvent": {
+      "button": {
+        "assign": "",
+        "cancel": ""
+      },
+      "connecting": "",
+      "description": "",
+      "descriptionLabel": "",
+      "name": {
+        "placeholder": ""
+      },
+      "nameLabel": "",
+      "noCamera": "",
+      "selectedCamera": "",
+      "title": ""
+    },
+    "assignUser": {
+      "authority": "",
+      "button": {
+        "assign": "",
+        "cancel": ""
+      },
+      "corporation": "",
+      "name": "",
+      "noCamera": "",
+      "noUser": "",
+      "normal": "",
+      "searchUser": {
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "cannotAssignFolder": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "cannotMoveChild": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "cannotMoveOrigin": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "cannotMoveSame": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "cannotPanel": {
+      "button": {
+        "confirm": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "common": {
+      "button": {
+        "apply": "",
+        "cancel": "",
+        "close": ""
+      }
+    },
+    "connectCamera": {
+      "apiAdd": {
+        "placeholder": "",
+        "table": {
+          "cameraAddress": "",
+          "cameraName": "",
+          "connectionStatus": ""
+        },
+        "title": ""
+      },
+      "button": {
+        "cancel": "",
+        "next": ""
+      },
+      "description": "",
+      "directAdd": {
+        "description": "",
+        "explanation": {
+          "label": "",
+          "placeholder": ""
+        },
+        "name": {
+          "errText": "",
+          "label": "",
+          "placeholder": ""
+        },
+        "rtsp": {
+          "errText": "",
+          "helpText": "",
+          "label": ""
+        },
+        "title": ""
+      },
+      "fileAdd": {
+        "selectFile": {
+          "button": "",
+          "description": "",
+          "downloadSampleFile": "",
+          "errText": "",
+          "placeholder": ""
+        },
+        "title": ""
+      },
+      "title": ""
+    },
+    "connectEvent": {
+      "button": {
+        "done": "",
+        "pre": ""
+      },
+      "connecting": "",
+      "description": "",
+      "title": ""
+    },
+    "createFolder": {
+      "button": {
+        "cancel": "",
+        "create": ""
+      },
+      "folder": {
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "deleteAccount": {
+      "button": {
+        "cancel": "",
+        "delete": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "deleteArea": {
+      "button": {
+        "close": "",
+        "delete": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "deleteCamera": {
+      "button": {
+        "cancel": "",
+        "delete": ""
+      },
+      "defaultTitle": "",
+      "description": "",
+      "title": ""
+    },
+    "deleteDividedArea": {
+      "button": {
+        "close": "",
+        "delete": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "disconnect": {
+      "button": {
+        "cancel": "",
+        "disconnect": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "eventListModify": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "failCameraToEvent": {
+      "subMessage": "",
+      "title": ""
+    },
+    "failConnectCamera": {
+      "button": {
+        "close": ""
+      },
+      "description": {
+        "overMaximumCamera": "",
+        "rtspValidation": ""
+      },
+      "title": ""
+    },
+    "failFileConnectCamera": {
+      "button": {
+        "close": ""
+      },
+      "description": {
+        "downloadFailedFiles": "",
+        "failedFileDescription": ""
+      },
+      "table": {
+        "cameraName": "",
+        "description": "",
+        "errorReason": ""
+      },
+      "title": ""
+    },
+    "failSaveArea": {
+      "button": {
+        "close": ""
+      },
+      "description": {
+        "dividedAreaRequired": "",
+        "saveFailedDescription": ""
+      },
+      "title": ""
+    },
+    "moveCamera": {
+      "button": {
+        "cancel": "",
+        "move": ""
+      },
+      "currentLocation": {
+        "defaultLocation": "",
+        "label": ""
+      },
+      "selectFolder": {
+        "allCamera": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "navigateToCameraManagement": {
+      "button": {
+        "close": "",
+        "move": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "newAccount": {
+      "button": {
+        "cancel": "",
+        "create": ""
+      },
+      "email": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "id": {
+        "bannedName": "",
+        "errText": "",
+        "helpText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "name": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "password": {
+        "errText": "",
+        "helpText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "passwordConfirm": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "notSavedLeave": {
+      "button": {
+        "cancel": "",
+        "leave": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "notSavedMove": {
+      "button": {
+        "cancel": "",
+        "move": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "panelUsageOver": {
+      "button": {
+        "confirm": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "passwordModify": {
+      "button": {
+        "cancel": "",
+        "modify": ""
+      },
+      "password": {
+        "errTextOne": "",
+        "errTextTwo": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "passwordConfirm": {
+        "errText": "",
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "reconnectCamera": {
+      "button": {
+        "close": "",
+        "move": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "resetDetectionArea": {
+      "button": {
+        "close": "",
+        "reset": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "resetPanel": {
+      "button": {
+        "close": "",
+        "reset": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "saveFullArea": {
+      "button": {
+        "cancel": "",
+        "save": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "setDelay": {
+      "button": {
+        "apply": "",
+        "cancel": ""
+      },
+      "cameraDescription": {
+        "display": "",
+        "nameAndDescription": ""
+      },
+      "delayTime": {
+        "label": ""
+      },
+      "noCamera": "",
+      "title": ""
+    },
+    "successAccountModify": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "successCreateAccount": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "successDeleteAccount": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "successPasswordtModify": {
+      "button": {
+        "close": ""
+      },
+      "description": "",
+      "title": ""
+    },
+    "updateCameraInfo": {
+      "button": {
+        "cancel": "",
+        "change": ""
+      },
+      "explanation": {
+        "label": "",
+        "placeholder": ""
+      },
+      "name": {
+        "label": "",
+        "placeholder": ""
+      },
+      "title": ""
+    },
+    "updateEvent": {
+      "button": {
+        "cancel": "",
+        "change": ""
+      },
+      "title": ""
+    },
+    "updateFolder": {
+      "button": {
+        "cancel": "",
+        "change": ""
+      },
+      "changeName": {
+        "label": "",
+        "placeholder": ""
+      },
+      "currentName": {
+        "label": ""
+      },
+      "errorMsgDuplicateFolder": "",
+      "title": ""
+    }
+  },
+  "nav": {
+    "admin": "",
+    "cameraManagement": "",
+    "detectedEvent": "",
+    "eventNotification": "",
+    "liveMonitoring": "",
+    "setting": "",
+    "toolTip": {
+      "logout": ""
+    },
+    "user": ""
+  },
+  "notification": {
+    "content": "",
+    "date": "",
+    "markAllAsRead": "",
+    "noNotifications": "",
+    "rtspConnectionError": "",
+    "storageUsageOver": "",
+    "systemNotification": "",
+    "time": ""
+  },
+  "roi": {
+    "DetectionAreaSetting": "",
+    "areaDivision": "",
+    "cameraInfo": "",
+    "cameraName": "",
+    "deleteArea": "",
+    "deleteDividedArea": "",
+    "description": "",
+    "detectionAreaRequired": "",
+    "dropDown": {
+      "resetDetectionArea": ""
+    },
+    "loadingImage": "",
+    "refresh": "",
+    "save": "",
+    "toast": {
+      "resetFailed": "",
+      "setDetectionArea": ""
+    },
+    "toolTip": {
+      "areaDivisionDescription": "",
+      "backManageCamera": "",
+      "cancel": "",
+      "clickToDivide": "",
+      "deleteAreaDescription": "",
+      "deleteDividedAreaDescription": "",
+      "refresh": "",
+      "refreshDisabledDescription": "",
+      "save": "",
+      "toolBox": ""
+    },
+    "user": ""
+  },
+  "signIn": {
+    "button": {
+      "login": ""
+    },
+    "id": {
+      "errText": "",
+      "helpText": "",
+      "label": "",
+      "placeholder": ""
+    },
+    "password": {
+      "errText": "",
+      "helpText": "",
+      "label": "",
+      "placeholder": ""
+    }
+  },
+  "systemSetting": {
+    "alarmSetting": "",
+    "basicSetting": "",
+    "countPeriodUnit": "",
+    "en": "",
+    "event": "",
+    "eventAlarm": "",
+    "eventAlarmOff": "",
+    "eventSound": "",
+    "ko": "",
+    "koStandardTime": "",
+    "language": "",
+    "manage": {
+      "admin": "",
+      "authority": "",
+      "button": {
+        "addUser": ""
+      },
+      "createdAt": "",
+      "dropDown": {
+        "accountDelete": "",
+        "info": "",
+        "password": ""
+      },
+      "email": "",
+      "id": "",
+      "name": "",
+      "newUser": "",
+      "noUser": "",
+      "normal": "",
+      "normalUser": "",
+      "organization": "",
+      "status": "",
+      "table": {
+        "authority": "",
+        "email": "",
+        "event": "",
+        "id": "",
+        "lastLogin": "",
+        "name": "",
+        "organization": ""
+      },
+      "user": ""
+    },
+    "manageUser": "",
+    "myInfo": "",
+    "productName": "",
+    "storageDataNotice": "",
+    "storagePeriod": "",
+    "storageUsage": "",
+    "storageUsageNotice": "",
+    "system": "",
+    "systemAlarm": "",
+    "systemAlarmOff": "",
+    "systemSettings": "",
+    "systemSound": "",
+    "timeZone": "",
+    "version": ""
+  },
+  "toast": {
+    "cameraConnectionCompleted": "",
+    "cameraConnectionError": "",
+    "cameraRequireSetting": "",
+    "cameraRequiresDetectionZone": "",
+    "eventOccurred": "",
+    "move": "",
+    "storageUsageOver": "",
+    "tokenExpired": ""
+  },
+  "video": {
+    "customCalendar": {
+      "friday": "",
+      "monday": "",
+      "saturday": "",
+      "sunday": "",
+      "thursday": "",
+      "tuesday": "",
+      "wednesday": ""
+    },
+    "detectionLog": {
+      "detected": "",
+      "ended": "",
+      "noEventsDetectedInTime": "",
+      "title": "",
+      "toolTip": {
+        "viewPanelClose": "",
+        "viewPanelOpen": ""
+      }
+    },
+    "informationSection": {
+      "connected": "",
+      "connectedEvent": "",
+      "connectionStatus": "",
+      "connectionTimestamp": "",
+      "description": "",
+      "disconnected": "",
+      "fps": "",
+      "height": "",
+      "information": "",
+      "latitude": "",
+      "longitude": "",
+      "name": "",
+      "noInformation": "",
+      "personInCharge": "",
+      "streamUrl": "",
+      "width": ""
+    },
+    "liveView": "",
+    "preparingVideo": "",
+    "realTimeStatus": "",
+    "recordedVideo": "",
+    "status": {
+      "error": "",
+      "safe": ""
+    },
+    "videoPlayer": {
+      "eventStartTime": "",
+      "noEventsDetectedInTime": ""
+    }
+  }
+}
