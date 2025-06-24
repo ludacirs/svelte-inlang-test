@@ -26,11 +26,14 @@ jobs:
       - name: Install exceljs only
         run: npm install exceljs
 
+      - name: Install dependencies
+        run: npm install -g tsx
+
       - name: Convert Excel to JSON using extract-xlsx
         run: node script/i18n/extract-xlsx.cjs import https://docs.google.com/spreadsheets/d/${{ github.event.inputs.spreadsheetId }}/export?format=xlsx
 
-      - name: Generate Translate TypeScript
-        run: node script/i18n/generate-i18n-types.ts
+      - name: Run TypeScript script
+        run: tsx script/i18n/generate-i18n-types.ts
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
